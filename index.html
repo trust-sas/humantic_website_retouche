@@ -1,377 +1,645 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Humantic - Technologie pour l'Humanitaire</title>
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
-</head>
+  </head>
 
-<body>
-
+  <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#home">
-                <img src="assets/images/Logo HUMANTIC.png" alt="Humantic Logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span> <!-- Uses filter in CSS for color -->
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#mission">Missions</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#expertise">Expertise</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#team">Équipe</a></li>
-                    <li class="nav-item ms-lg-3"><a class="btn btn-primary text-white"
-                            href="#contact">Contactez-nous</a></li>
-                </ul>
-            </div>
+      <div class="container">
+        <a class="navbar-brand" href="#home">
+          <img
+            src="assets/images/Logo HUMANTIC.png"
+            alt="Humantic Logo"
+            class="navbar-logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+          <!-- Uses filter in CSS for color -->
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">À propos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#mission">Missions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#expertise">Expertise</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#team">Équipe</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-primary text-white" href="#contact"
+                >Contactez-nous</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero-section">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h1 class="hero-title" style="color: #fff;">
-                        L'Humanitaire
-                        <span>À travers les TIC</span>
-                    </h1>
-                    <p class="hero-subtitle">
-                        Humantic défend le droit à la dignité numérique. Nous apportons des solutions technologiques là
-                        où la vie et la dignité sont menacées.
-                    </p>
-                    <div class="d-flex gap-3">
-                        <a href="#about" class="btn btn-primary btn-lg">Découvrir</a>
-                        <a href="#contact" class="btn btn-outline-light btn-lg">Nous rejoindre</a>
-                    </div>
-                </div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <h1 class="hero-title" style="color: #fff">
+              L'Humanitaire
+              <span>À travers les TIC</span>
+            </h1>
+            <p class="hero-subtitle">
+              Humantic défend le droit à la dignité numérique. Nous apportons
+              des solutions technologiques là où la vie et la dignité sont
+              menacées.
+            </p>
+            <div class="d-flex gap-3 hero-buttons">
+              <a href="#about" class="btn btn-primary btn-lg">Découvrir</a>
+              <a href="#contact" class="btn btn-outline-light btn-lg"
+                >Nous rejoindre</a
+              >
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <div class="about-img-wrapper">
-                        <img src="assets/images/Equipe.jpeg" alt="Équipe Humantic" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-lg-6 ps-lg-5">
-                    <span class="section-subtitle">Qui sommes-nous ?</span>
-                    <h2 class="section-title">La Dignité Numérique pour Tous</h2>
-                    <p class="about-text mt-4">
-                        Créée en 2019, HUMANTIC est une association d'aide informatique à vocation sociale. Nous
-                        intervenons partout au Cameroun pour garantir que chaque être humain ait accès aux opportunités
-                        offertes par le numérique.
-                    </p>
-
-                    <div class="about-feature">
-                        <div class="feature-icon">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <div>
-                            <h5>Vocation Humanitaire</h5>
-                            <p class="text-muted mb-0">Nous agissons là où la fracture numérique renforce l'exclusion
-                                sociale.</p>
-                        </div>
-                    </div>
-
-                    <div class="about-feature">
-                        <div class="feature-icon">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <div>
-                            <h5>Expertise Technique</h5>
-                            <p class="text-muted mb-0">Formation, maintenance et support pour autonomiser les
-                                communautés.</p>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="about-img-wrapper">
+              <img
+                src="assets/images/Equipe.jpeg"
+                alt="Équipe Humantic"
+                class="img-fluid"
+              />
             </div>
+          </div>
+          <div class="col-lg-6 ps-lg-5">
+            <span class="section-subtitle">Qui sommes-nous ?</span>
+            <h2 class="section-title">La Dignité Numérique pour Tous</h2>
+            <p class="about-text mt-4">
+              Créée en 2019, HUMANTIC est une association d'aide informatique à
+              vocation sociale. Nous intervenons partout au Cameroun pour
+              garantir que chaque être humain ait accès aux opportunités
+              offertes par le numérique.
+            </p>
+
+            <div class="about-feature">
+              <div class="feature-icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div>
+                <h5>Vocation Humanitaire</h5>
+                <p class="text-muted mb-0">
+                  Nous agissons là où la fracture numérique renforce l'exclusion
+                  sociale.
+                </p>
+              </div>
+            </div>
+
+            <div class="about-feature">
+              <div class="feature-icon">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <div>
+                <h5>Expertise Technique</h5>
+                <p class="text-muted mb-0">
+                  Formation, maintenance et support pour autonomiser les
+                  communautés.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Stats Section (The Block replacement) -->
     <section id="stats" class="stats-section">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-md-3 col-6">
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="198">0</span>
-                        <span class="stat-label">Personnes Aidées</span>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="2019">0</span>
-                        <span class="stat-label">Fondation</span>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="41">0</span>
-                        <span class="stat-label">Bénévoles</span>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="365">0</span>
-                        <span class="stat-label">Jours d'Activité</span>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-3 col-6">
+            <div class="stat-item">
+              <span class="stat-number" data-target="198">0</span>
+              <span class="stat-label">Personnes Aidées</span>
             </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="stat-item">
+              <span class="stat-number" data-target="2019">0</span>
+              <span class="stat-label">Fondation</span>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="stat-item">
+              <span class="stat-number" data-target="41">0</span>
+              <span class="stat-label">Bénévoles</span>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="stat-item">
+              <span class="stat-number" data-target="365">0</span>
+              <span class="stat-label">Jours d'Activité</span>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Expertise Section -->
     <section id="expertise" class="expertise-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Ce que nous faisons</span>
-                <h2 class="section-title">Nos Domaines d'Intervention</h2>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="expertise-card">
-                        <div class="card-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <h4 class="card-title">Formation</h4>
-                        <p class="text-muted">Des programmes éducatifs adaptés pour démocratiser l'accès aux compétences
-                            numériques essentielles.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="expertise-card">
-                        <div class="card-icon">
-                            <i class="fas fa-tools"></i>
-                        </div>
-                        <h4 class="card-title">Assistance</h4>
-                        <p class="text-muted">Support technique d'urgence et maintenance préventive pour assurer la
-                            continuité des services.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="expertise-card">
-                        <div class="card-icon">
-                            <i class="fas fa-hands-helping"></i>
-                        </div>
-                        <h4 class="card-title">Inclusion</h4>
-                        <p class="text-muted">Lutte active contre la fracture numérique en accompagnant les populations
-                            les plus vulnérables.</p>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Ce que nous faisons</span>
+          <h2 class="section-title">Nos Domaines d'Intervention</h2>
         </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="expertise-card">
+              <div class="card-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h4 class="card-title">Formation</h4>
+              <p class="text-muted">
+                Des programmes éducatifs adaptés pour démocratiser l'accès aux
+                compétences numériques essentielles.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="expertise-card">
+              <div class="card-icon">
+                <i class="fas fa-tools"></i>
+              </div>
+              <h4 class="card-title">Assistance</h4>
+              <p class="text-muted">
+                Support technique d'urgence et maintenance préventive pour
+                assurer la continuité des services.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="expertise-card">
+              <div class="card-icon">
+                <i class="fas fa-hands-helping"></i>
+              </div>
+              <h4 class="card-title">Inclusion</h4>
+              <p class="text-muted">
+                Lutte active contre la fracture numérique en accompagnant les
+                populations les plus vulnérables.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Team Section -->
     <section id="team" class="team-section py-5">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Notre Force</span>
-                <h2 class="section-title">L'Équipe Humantic</h2>
-            </div>
-
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-3 col-md-6">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="assets/images/Photo_Nana.jpg" alt="Berenger Nana">
-                        </div>
-                        <div class="team-info">
-                            <h5 class="team-name">Berenger Nana</h5>
-                            <span class="team-role">Président & Formateur</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="assets/images/Photo_Sokeng.jpg" alt="M. Sokeng Dongmo">
-                        </div>
-                        <div class="team-info">
-                            <h5 class="team-name">M. Sokeng Dongmo</h5>
-                            <span class="team-role">Responsable Support</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="assets/images/Photo_Childeric.jpg" alt="Childeric Socgna">
-                        </div>
-                        <div class="team-info">
-                            <h5 class="team-name">Childeric Socgna</h5>
-                            <span class="team-role">Coordinateur Bénévoles</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Notre Force</span>
+          <h2 class="section-title">L'Équipe Humantic</h2>
         </div>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-3 col-md-6">
+            <div class="team-item">
+              <div class="team-img">
+                <img src="assets/images/Photo_Nana.jpg" alt="Berenger Nana" />
+              </div>
+              <div class="team-info">
+                <h5 class="team-name">Berenger Nana</h5>
+                <span class="team-role">Président & Formateur</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="team-item">
+              <div class="team-img">
+                <img
+                  src="assets/images/Photo_Sokeng.jpg"
+                  alt="M. Sokeng Dongmo"
+                />
+              </div>
+              <div class="team-info">
+                <h5 class="team-name">M. Sokeng Dongmo</h5>
+                <span class="team-role">Responsable Support</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="team-item">
+              <div class="team-img">
+                <img
+                  src="assets/images/Photo_Childeric.jpg"
+                  alt="Childeric Socgna"
+                />
+              </div>
+              <div class="team-info">
+                <h5 class="team-name">Childeric Socgna</h5>
+                <span class="team-role">Coordinateur Bénévoles</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 mb-5 mb-lg-0">
-                    <div class="section-header text-start mb-4">
-                        <span class="section-subtitle">Contact</span>
-                        <h2 class="section-title">Restons en Contact</h2>
-                        <p class="text-muted">Vous souhaitez rejoindre l'aventure ou vous avez besoin d'aide ? N'hésitez
-                            pas à nous écrire.</p>
-                    </div>
-
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div>
-                            <h5 class="mb-1">Adresse</h5>
-                            <p class="text-muted mb-0">Yaoundé Ngoakélé (Cité Universitaire)</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div>
-                            <h5 class="mb-1">Téléphone</h5>
-                            <p class="text-muted mb-0">(+237) 6 91 22 05 77</p>
-                            <p class="text-muted mb-0">(+237) 6 97 38 85 79</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h5 class="mb-1">Email</h5>
-                            <p class="text-muted mb-0">contact@humantic.org</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-7">
-                    <div class="contact-card scale-up-center">
-                        <form>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Votre Nom">
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="tel" class="form-control" placeholder="Votre Téléphone">
-                                </div>
-                            </div>
-                            <input type="email" class="form-control" placeholder="Votre Email">
-                            <textarea rows="5" class="form-control" placeholder="Votre Message"></textarea>
-                            <button type="submit" class="btn btn-primary w-100">Envoyer le Message</button>
-                        </form>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 mb-5 mb-lg-0">
+            <div class="section-header text-start mb-4">
+              <span class="section-subtitle">Contact</span>
+              <h2 class="section-title">Restons en Contact</h2>
+              <p class="text-muted">
+                Vous souhaitez rejoindre l'aventure ou vous avez besoin d'aide ?
+                N'hésitez pas à nous écrire.
+              </p>
             </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h5 class="mb-1">Adresse</h5>
+                <p class="text-muted mb-0">
+                  Yaoundé Ngoa-ékélé (Cité Universitaire)
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <h5 class="mb-1">Téléphone</h5>
+                <p class="text-muted mb-0">(+237) 6 91 22 05 77</p>
+                <p class="text-muted mb-0">(+237) 6 97 38 85 79</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h5 class="mb-1">Email</h5>
+                <p class="text-muted mb-0">contact@humantic.org</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="contact-card scale-up-center">
+              <form class="contact-form">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Votre Nom"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="tel"
+                      class="form-control"
+                      placeholder="Votre Téléphone"
+                    />
+                  </div>
+                </div>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Votre Email"
+                />
+                <textarea
+                  rows="5"
+                  class="form-control"
+                  placeholder="Votre Message"
+                ></textarea>
+                <button type="submit" class="btn btn-primary w-100">
+                  Envoyer le Message
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <img src="assets/images/Logo HUMANTIC.png" alt="Humantic" class="footer-logo">
-                    <p>L'humanitaire à travers les TIC. Ensemble pour une dignité numérique partagée.</p>
-                    <div class="footer-social mt-4">
-                        <a href="https://www.facebook.com/people/Humantic-Cameroun/100081665059216/"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.linkedin.com/in/humantic-cameroun-6808a436a/"><i
-                                class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-2 offset-lg-1 col-6 mb-4">
-                    <h5 class="text-white mb-4">Liens</h5>
-                    <ul class="list-unstyled footer-links">
-                        <li><a href="#home">Accueil</a></li>
-                        <li><a href="#about">À propos</a></li>
-                        <li><a href="#mission">Missions</a></li>
-                        <li><a href="#team">Équipe</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-6 mb-4">
-                    <h5 class="text-white mb-4">Expertise</h5>
-                    <ul class="list-unstyled footer-links">
-                        <li><a href="#">Formation</a></li>
-                        <li><a href="#">Maintenance</a></li>
-                        <li><a href="#">Conseil</a></li>
-                        <li><a href="#">Support</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 mb-4">
-                    <h5 class="text-white mb-4">Newsletter</h5>
-                    <p class="small">Restez informé de nos actions.</p>
-                    <div class="input-group">
-                        <input type="email" class="form-control border-0" placeholder="Email"
-                            style="border-radius: 5px 0 0 5px;">
-                        <button class="btn btn-primary" style="border-radius: 0 5px 5px 0;"><i
-                                class="fas fa-paper-plane"></i></button>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <img
+              src="assets/images/Logo HUMANTIC.png"
+              alt="Humantic"
+              class="footer-logo"
+            />
+            <p>
+              L'humanitaire à travers les TIC. Ensemble pour une dignité
+              numérique partagée.
+            </p>
+            <div class="footer-social mt-4">
+              <a
+                href="https://www.facebook.com/people/Humantic-Cameroun/100081665059216/"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="https://www.linkedin.com/in/humantic-cameroun-6808a436a/"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
             </div>
-            <hr class="border-secondary my-4">
-            <div class="text-center small opacity-75">
-                &copy; 2025 Humantic. Tous droits réservés.
+          </div>
+          <div class="col-lg-2 offset-lg-1 col-6 mb-4">
+            <h5 class="text-white mb-4">Liens</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#home">Accueil</a></li>
+              <li><a href="#about">À propos</a></li>
+              <li><a href="#mission">Missions</a></li>
+              <li><a href="#team">Équipe</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-6 mb-4">
+            <h5 class="text-white mb-4">Expertise</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#">Formation</a></li>
+              <li><a href="#">Maintenance</a></li>
+              <li><a href="#">Conseil</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 mb-4">
+            <h5 class="text-white mb-4">Newsletter</h5>
+            <p class="small">Restez informé de nos actions.</p>
+            <div class="input-group">
+              <input
+                type="email"
+                class="form-control border-0"
+                placeholder="Email"
+                style="border-radius: 5px 0 0 5px"
+              />
+              <button
+                class="btn btn-primary"
+                style="border-radius: 0 5px 5px 0"
+              >
+                <i class="fas fa-paper-plane"></i>
+              </button>
             </div>
+          </div>
         </div>
+        <hr class="border-secondary my-4" />
+        <div class="text-center small opacity-75">
+          &copy; 2025 Humantic. Tous droits réservés.
+        </div>
+      </div>
     </footer>
+
+    <!-- Bouton Flottant Faire un Don -->
+    <button
+      type="button"
+      class="donate-float-btn"
+      data-bs-toggle="modal"
+      data-bs-target="#donationModal"
+    >
+      <i class="fas fa-heart"></i> Faire un Don
+    </button>
+    <!-- data-bs-togle="modal" et data-bs-target="#donationModal" sont les attributs de bootstrap ce qui permet l'ouverture et la fermeture automatique-->
+    <!-- Modale Faire un Don -->
+    <div class="modal fade" id="donationModal" tabindex="-1" aria-hidden="true">
+      <div
+        class="modal-dialog donation-modal-dialog modal-dialog-centered"
+      >
+        <div class="modal-content donation-modal-content">
+          <div class="donation-modal-header">
+            <span class="section-subtitle text-white"
+              ><i class="fas fa-heart"></i> Soutenez Notre Mission</span
+            >
+            <h3>Faire un Don</h3>
+            <p>
+              Votre contribution aide Humantic à garantir la dignité numérique
+              pour tous, partout au Cameroun.
+            </p>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Fermer"
+            ></button>
+          </div>
+
+          <div class="modal-body donation-modal-body"> 
+            <div class="donation-grid">
+
+                <!--colonne gauche :Montant+FormulairePaiement-->
+                <div class="donation-col-left">
+                    <div class="donation-tabs">
+                        <button type="button" class="donation-tab active" data-tab="unique">Don Unique</button>
+                        <button type="button" class="donation-tab" data-tab="mensuel">Don Mensuel</button>
+                    </div>
+
+                    <h6 class="mt-3 mb-2">Sélectionnez le Montant</h6>
+                    <div class="donation-amounts">
+                        <button type="button" class="amount-btn" data-amount="1000">1000</button>
+                        <button type="button" class="amount-btn" data-amount="5000">5000</button>
+                        <button type="button" class="amount-btn" data-amount="10000">10000</button>
+                        <button type="button" class="amount-btn" data-amount="25000">25000</button>
+                        <button type="button" class="amount-btn" data-amount="50000">50000</button>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label mt-2">Montant Personnalisé</label>
+                        <div class="input-group">
+                            <input type="number" id="customAmount" class="form-control" placeholder="0" min="0">
+                            <span class="input-group-text">FCFA</span>
+                        </div>
+                    </div>
+
+                    <h6 class="mb-2">Informations sur le Don</h6>
+                    <form class="donation-form">
+                        <div class="row g-2">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Votre Nom" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" placeholder="Votre Email" required>
+                            </div>
+                        </div>
+                            <div class="mt-2">
+                                <input type="text" class="form-control" placeholder="Saisiez Votre Pays">
+                            </div>
+                            <div class="mt-2">
+                                <textarea class="form-control" rows="2" placeholder="Laissez un message de soutien... (optionnel)"></textarea>
+                            </div>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" id="anonDon">
+                                <label class="form-check-label" for="anonDon">Rendre ce don anonyme</label>
+                            </div>
+
+                            <h6 class="mt-3 mb-2">Méthode de paiement</h6>
+                            <div class="payment-method-card selected">
+                                <i class="fas fa-mobile-alt"></i>
+                                <div>
+                                    <strong>Mobile Money</strong>
+                                    <p class="mb-0 text-muted small">Payer avec MTN Mobile Money ou Orange Money</p>
+                                </div>
+                            </div>
+                            <div class="row g-2 mt-2">
+                                <div class="col-6">
+                                    <button type="button" class="btn payment-option-btn active" data-method="Orange">Orange Money</button>
+                                </div>
+                                <div class="col-6">
+                                    <button type="button" class="btn payment-option-btn" data-method="mtn">MTN Mobile Money</button>
+                                </div>
+                            </div>
+                            <div class="mt-2">
+                                <label class="form-label">Numéro de Téléphone (Cameroun)</label>
+                                <input type="tel" id="donationPhone" class="form-control" placeholder="+237 ex. 650 69 70 80">
+                                <small class="text-muted">Vous recevrez une demande de confirmation sur ce numéro.</small>
+                                <div class="phone-error" id="phoneError"></div>
+                            </div>
+
+                            <button type="submit" class="btn donation-submit-btn w-100 mt-3">
+                                <i class="fas fa-heart"></i> Finaliser le Don
+                            </button>
+                            <p class="text-center text-muted small mt-2 mb-0">Paiement sécurisé-vos informations sont protégées</p>
+                    </form>
+                </div>
+
+                <!-- Colonne Droite : Votre Impact -->
+                    <div class="donation-col-right">
+                        <h6 class="impact-title mb-2">Votre Impact</h6>
+                        <div class="donation-impact-box mb-3">
+                            <div class="impact-item">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>1 000 FCFA peuvent fournir</strong>
+                                    <p>Une session d'initiation informatique pour un jeune</p>
+                                </div>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>5 000 FCFA peuvent fournir</strong>
+                                    <p>La maintenance d'un poste informatique pour une famille</p>
+                                </div>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>10 000 FCFA peuvent fournir</strong>
+                                    <p>Un kit d'accès numérique complet pour un foyer</p>
+                                </div>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>25 000 FCFA peuvent fournir</strong>
+                                    <p>L'équipement partiel d'une salle de formation</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h6 class="impact-title mb-2">Pourquoi Faire un Don à Humantic ?</h6>
+                        <div class="why-donate-box">
+                            <div class="why-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div>
+                                    <strong>Formation</strong>
+                                    <p>Des programmes éducatifs adaptés pour démocratiser l'accès aux compétences numériques essentielles.</p>
+                                </div>
+                            </div>
+                            <div class="why-item">
+                                <i class="fas fa-tools"></i>
+                                <div>
+                                    <strong>Assistance</strong>
+                                    <p>Support technique d'urgence et maintenance préventive pour assurer la continuité des services.</p>
+                                </div>
+                            </div>
+                            <div class="why-item">
+                                <i class="fas fa-exchange-alt"></i>
+                                <div>
+                                    <strong>Inclusion</strong>
+                                    <p>Lutte active contre la fracture numérique en accompagnant les populations les plus vulnérables.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+          </div>
+        </div>  
+    </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
     <script>
-        // Navbar Scroll Effect
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > 50) {
-                document.querySelector('.navbar').classList.add('scrolled');
-            } else {
-                document.querySelector('.navbar').classList.remove('scrolled');
-            }
-        });
+      // Navbar Scroll Effect
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+          document.querySelector(".navbar").classList.add("scrolled");
+        } else {
+          document.querySelector(".navbar").classList.remove("scrolled");
+        }
+      });
 
-        // Close mobile menu on click
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                const toggler = document.querySelector('.navbar-toggler');
-                const collapse = document.querySelector('.navbar-collapse');
-                if (window.getComputedStyle(toggler).display !== 'none' && collapse.classList.contains('show')) {
-                    toggler.click();
-                }
-            });
+      // Close mobile menu on click
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          const toggler = document.querySelector(".navbar-toggler");
+          const collapse = document.querySelector(".navbar-collapse");
+          if (
+            window.getComputedStyle(toggler).display !== "none" &&
+            collapse.classList.contains("show")
+          ) {
+            toggler.click();
+          }
         });
+      });
     </script>
-</body>
-
+  </body>
 </html>
