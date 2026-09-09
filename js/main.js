@@ -17,9 +17,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   navLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
+      const href = this.getAttribute("href");
+
+      // si le lien pointe vers une autre page (ex:index.html#about), on naviguer normalement
+      if (href.includes(".html")) {
+        return;
+      }
       e.preventDefault(); // empeche le saut brutal par defaut du navigateur
 
-      const targetId = this.getAttribute("href");
+      const targetId = href;
       const targetSection = document.querySelector(targetId);
 
       if (targetSection) {

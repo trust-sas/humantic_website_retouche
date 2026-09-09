@@ -1097,3 +1097,153 @@ section {
 .form-control.is-invalid {
   border-color: #e74c3c !important;
 }
+
+/* ===== PAGE BÉNÉVOLAT ===== */
+.page-hero {
+  background: var(--gradient-primary);
+  color: #fff;
+  padding: 160px 0 60px;
+  text-align: left;
+}
+
+.page-hero-tag {
+  color: var(--accent-amber);
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.page-hero h1 {
+  color: #fff;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.page-hero p {
+  max-width: 700px;
+  opacity: 0.9;
+}
+
+.volunteer-why-section,
+.volunteer-opportunities-section,
+.volunteer-apply-section {
+  padding: 80px 0;
+}
+
+.benefit-card,
+.opportunity-card {
+  background: var(--pure-white);
+  border-radius: 16px;
+  padding: 2rem;
+  height: 100%;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s ease;
+}
+
+.benefit-card:hover,
+.opportunity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.benefit-icon,
+.opportunity-icon {
+  width: 55px;
+  height: 55px;
+  background: var(--off-white);
+  color: var(--primary-blue);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.opportunity-tags {
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.tag-duration,
+.tag-location {
+  font-size: 0.8rem;
+  padding: 5px 12px;
+  border-radius: 50px;
+}
+
+.tag-duration {
+  background: rgba(46, 204, 113, 0.15);
+  color: #27ae60;
+}
+
+.tag-location {
+  background: rgba(255, 183, 0, 0.15);
+  color: #b8860b;
+}
+
+.requirement-list {
+  list-style: none;
+  padding: 0;
+}
+
+.requirement-list li {
+  margin-bottom: 1rem;
+  color: var(--dark-navy);
+}
+
+.requirement-list i {
+  color: #2ecc71;
+  margin-right: 10px;
+}
+
+.volunteer-form-card {
+  background: var(--off-white);
+  border-radius: 16px;
+  padding: 2.5rem;
+}
+
+.volunteer-submit-btn {
+  background: var(--dark-navy);
+  color: #fff;
+  font-weight: 600;
+  padding: 12px;
+  border-radius: 50px;
+  border: none;
+}
+
+.volunteer-submit-btn:hover {
+  background: var(--primary-blue);
+}
+
+.volunteer-cta-section {
+  background: var(--gradient-primary);
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.volunteer-cta-section h2 {
+  color: #fff;
+}
+
+.cta-pill,
+.cta-pill-outline {
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.cta-pill {
+  background: #fff;
+  color: var(--dark-navy);
+}
+
+.cta-pill-outline {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
