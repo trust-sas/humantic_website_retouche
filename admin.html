@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Administration Humantic</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f6f9; }
+    .container { max-width: 900px; margin: 50px auto; background: white; padding: 20px; border-radius: 8px; }
+    h1 { text-align: center; color: #007bff; }
+    .hidden { display: none; }
+    .btn { background: #007bff; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px; }
+    .btn:hover { background: #0056b3; }
+    textarea { width: 100%; height: 80px; margin-top: 5px; }
+    .section-block { border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Administration Humantic</h1>
+
+    <!-- Formulaire de connexion -->
+    <div id="login-section">
+      <h2>Connexion</h2>
+      <input type="text" id="username" placeholder="Nom d'utilisateur"><br><br>
+      <input type="password" id="password" placeholder="Mot de passe"><br><br>
+      <button class="btn" onclick="login()">Se connecter</button>
+      <p id="login-message"></p>
+    </div>
+
+    <!-- Tableau de bord -->
+    <div id="dashboard" class="hidden">
+      <h2>Tableau de bord</h2>
+      <div id="content-sections"></div>
+
+      <h3>➕ Ajouter une nouvelle section</h3>
+      <input type="text" id="new-section" placeholder="Nom de la section"><br>
+      <textarea id="new-text" placeholder="Texte de la section"></textarea><br>
+      <button class="btn" onclick="addContent()">Ajouter</button>
+    </div>
+  </div>
+
+  <script>
+    async function login() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      const response = await fetch("http://127.0.0.1:5000/api/admin/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password })
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        document.getElementById("login-section").classList.add("hidden");
+        document.getElementById("dashboard").classList.remove("hidden");
+        loadContent();
+      } else {
+        document.getElementById("login-message").innerText = "❌ Identifiants incorrects";
+      }
+    }
+
+    async function loadContent() {
+      const response = await fetch("http://127.0.0.1:5000/api/content");
+      const data = await response.json();
+      const container = document.getElementById("content-sections");
+      container.innerHTML = "";
+
+      data.forEach(item => {
+        const div = document.createElement("div");
+        div.className = "section-block";
+        div.innerHTML = `
+          <h3>${item.section}</h3>
+          <textarea id="text-${item.section}">${item.texte}</textarea><br>
+          <button class="btn" onclick="updateContent('${item.section}')">Mettre à jour</button>
+          <button class="btn" style="background:#dc3545" onclick="deleteContent('${item.section}')">Supprimer</button>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    async function updateContent(section) {
+      const texte = document.getElementById(`text-${section}`).value;
+      const response = await fetch("http://127.0.0.1:5000/api/content", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ section, texte })
+      });
+      const data = await response.json();
+      alert(data.message);
+    }
+
+    async function deleteContent(section) {
+      const response = await fetch(`http://127.0.0.1:5000/api/content/${section}`, {
+        method: "DELETE"
+      });
+      const data = await response.json();
+      alert(data.message);
+      loadContent();
+    }
+
+    async function addContent() {
+      const section = document.getElementById("new-section").value;
+      const texte = document.getElementById("new-text").value;
+      const response = await fetch("http://127.0.0.1:5000/api/content", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ section, texte })
+      });
+      const data = await response.json();
+      alert(data.message);
+      loadContent();
+    }
+  </script>
+</body>
+</html>
+
