@@ -199,4 +199,20 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 }
 
+// ===== BOUTON ADMIN =====
+document.addEventListener("DOMContentLoaded", function() {
+  const adminBtn = document.getElementById("adminBtn");
+
+  if (adminBtn) {
+    adminBtn.addEventListener("click", function() {
+      const input = prompt("Entrez le mot de passe administrateur :");
+      if (input === "humantic2026") {
+        window.location.href = "admin_panel/admin.html"; 
+      } else {
+        alert("❌ Accès refusé.");
+      }
+    });
+  }
+});
+
 });

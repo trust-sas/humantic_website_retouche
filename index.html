@@ -485,6 +485,19 @@
           &copy; 2026 Humantic. Tous droits réservés.
         </div>
       </div>
+
+      <div id="admin-access">
+    <button id="adminBtn">🔑 Admin</button>
+  </div>
+      <script>document.getElementById("adminBtn").addEventListener("click", function() {
+        const input = prompt("Entrez le mot de passe administrateur :");
+        if (input === "humantic2026") {
+          window.location.href = "admin_panel/admin.html"; 
+        } else {
+          alert("❌ Accès refusé.");
+        }
+      });
+      </script>
     </footer>
 
     <!-- Bouton Flottant Faire un Don -->
